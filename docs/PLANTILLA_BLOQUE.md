@@ -56,8 +56,9 @@ Explica cada decisión y por qué la tomaste.
 ## 5. Receta
 
 Tu receta en pseudocódigo, escrita antes de programar.
-
-```
+1.Poner contador en 0
+2.Para cada alumno, si su calificacion es 7 o mas, sumar uno al contador 
+3.Devolver el contador
 [Inserta aquí tu respuesta]
 ```
 
