@@ -73,3 +73,53 @@ void mostrarLista(const std::string nombres[],
 
 // ---------- Implementacion (equipo) ----------
 // Escriban aqui abajo el codigo de las tres funciones.
+
+bool calificacionValida(double calificacion) {
+    return calificacion >= CALIFICACION_MINIMA &&
+           calificacion <= CALIFICACION_MAXIMA;
+}
+
+int agregarAlumno(std::string nombres[],
+                  double espanol[],
+                  double matematicas[],
+                  double disenoProgramas[],
+                  int total,
+                  std::string nombre,
+                  double calificacionEspanol,
+                  double calificacionMatematicas,
+                  double calificacionDisenoProgramas) {
+    if (total >= MAX_ALUMNOS) {
+        return total;
+    }
+
+    nombres[total] = nombre;
+    espanol[total] = calificacionEspanol;
+    matematicas[total] = calificacionMatematicas;
+    disenoProgramas[total] = calificacionDisenoProgramas;
+
+    return total + 1;
+}
+
+void mostrarLista(const std::string nombres[],
+                  const double espanol[],
+                  const double matematicas[],
+                  const double disenoProgramas[],
+                  int total) {
+    if (total == 0) {
+        std::cout << "No hay alumnos registrados.\n";
+        return;
+    }
+
+    std::cout << "--- LISTA DEL GRUPO ---\n";
+    std::cout << "   Nombre   Esp    Mat    DP\n";
+
+    for (int i = 0; i < total; ++i) {
+        std::cout << i + 1 << ". "
+                  << nombres[i]
+                  << "   " << espanol[i]
+                  << "    " << matematicas[i]
+                  << "    " << disenoProgramas[i]
+                  << "\n";
+    }
+}
+
