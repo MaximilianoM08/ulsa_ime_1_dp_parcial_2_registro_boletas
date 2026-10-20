@@ -5,6 +5,7 @@
 #include "utilerias.h"
 
 
+
 void mostrarBoleta(const std::string nombres[],
     const double espanol[],
     const double matematicas[],
@@ -42,3 +43,4 @@ void mostrarBoleta(const std::string nombres[],
     std::cout << "Promedio: " << (promedio) << "    Materias Reprobadas: " << materiasReprobadas;
     std::cout << "  Estado: " << ((promedio >= CALIFICACION_APROBATORIA && materiasReprobadas == 0) ? "Aprobado" : "Reprobado") << "\n";
 }
+
